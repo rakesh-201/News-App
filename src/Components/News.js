@@ -32,7 +32,7 @@ const News = (props) => {
 
     useEffect(() => {
                 
-            var url = `http://newsapi.org/v2/top-headlines?' +
+            var url = `https://newsapi.org/v2/top-headlines?' +
             'country=us&' +
             'apiKey=11bacc3e703744938118d73b2d3aefb4`;
             fetch(url, {
