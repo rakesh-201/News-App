@@ -32,7 +32,7 @@ const News = (props) => {
 
     useEffect(() => {
                 
-            var url = `http://newsapi.org/v2/everything?q=Energy&from=${d()}&sortBy=popularity&apiKey=11bacc3e703744938118d73b2d3aefb4`;
+            var url = `https://newsapi.org/v2/everything?q=Energy&from=${d()}&sortBy=popularity&apiKey=11bacc3e703744938118d73b2d3aefb4`;
             fetch(url, {
                 method: 'GET',
             }).then((response) => {
