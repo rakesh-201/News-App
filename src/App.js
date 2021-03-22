@@ -1,44 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/navbar';
-import { useState } from 'react';
-import News from './Components/News';
-import Footer from './Components/footer';
+import React from "react";
+import "./App.css";
+import SideBar from "./Components/SideBar";
+import NavBar from "./Components/NavBar";
+import { CssBaseline, makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  appBar: {
+    width: "100%",
+    paddingLeft: "320px",
+  },
+});
 
 function App() {
-  const [page, setPage] = useState('home')
+  const { appBar } = useStyles();
 
   return (
-    <div className="App">
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossOrigin="anonymous"
-        />
-
-      {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <div className="con bg-dark mb-3">
-          <Navbar />
-        </div>
-        <div>
-          <News />
-        </div>
-        <Footer />
-      {/* </header> */}
-    </div>
+    <>
+      <SideBar />
+      <div className={appBar}>
+        <NavBar />
+      </div>
+      <CssBaseline />
+    </>
   );
 }
 
